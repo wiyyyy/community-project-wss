@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AggregatedTrades.API", "AggregatedTrades.API\AggregatedTrades.API.csproj", "{95652D9A-2C83-4D6E-80A1-C18CCA607246}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnifyTrade", "UnifyTrade\UnifyTrade.csproj", "{70DEEDB2-62F0-45E8-AE02-92CAE40A2D56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{95652D9A-2C83-4D6E-80A1-C18CCA607246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95652D9A-2C83-4D6E-80A1-C18CCA607246}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95652D9A-2C83-4D6E-80A1-C18CCA607246}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95652D9A-2C83-4D6E-80A1-C18CCA607246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DEEDB2-62F0-45E8-AE02-92CAE40A2D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DEEDB2-62F0-45E8-AE02-92CAE40A2D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DEEDB2-62F0-45E8-AE02-92CAE40A2D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DEEDB2-62F0-45E8-AE02-92CAE40A2D56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
