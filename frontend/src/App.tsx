@@ -6,9 +6,10 @@ import SignalRConnection from './services/websocket';
 import EntryComponent from './components/EntryComponent';
 
 type TradeDetail = {
-    m: boolean,
-    p: number,
-    q: number,
+    direction: boolean,
+    price: number,
+    quantity: number,
+    source: string,
 }
 
 const App: Component = () => {
@@ -18,28 +19,16 @@ const App: Component = () => {
     signalrConnection.connect();
 
     signalrConnection.connectionOn("aggrtrade", (data: TradeDetail) => {
-        if (data.p * data.q > 1000)
+        if (data.price * data.quantity > 1000)
             setList(prev => [data, ...prev]);
     });
 
     const [list, setList] = createSignal<TradeDetail[]>([]);
 
-    // setInterval(()=> 
-    // {
-    //     let trade: TradeDetail = {price: Math.random()*10, quantity: 20, source: "green"};
-    //     setList( prev => [trade, ...prev]);
-    // },1000);
-
-    // setInterval(()=> 
-    // {
-    //     let trade: TradeDetail = {price: Math.random()*10, quantity: 20, source: "red"};
-    //     setList( prev => [trade, ...prev]);
-    // },100);
-
     return (
         <div class="container mx-auto place-content-center">
             <For each={list()} fallback={<div> Loading...</div>}>
-                {(item) => <EntryComponent price={item.p} color={item.m} quantity={item.q}></EntryComponent>}
+                {(item) => <EntryComponent source={item.source} price={item.price} color={item.direction} quantity={item.quantity}></EntryComponent>}
             </For>
         </div>
     );
